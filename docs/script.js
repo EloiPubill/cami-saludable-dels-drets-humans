@@ -16,9 +16,7 @@ function marcarPuntoControl() {
         tiempoElemento.style.color = 'black';
     }
 
-    // Aplicar negrita al último punto de control mostrado
-    const puntosControl = document.querySelectorAll('.punto-control');
-    puntosControl.forEach(puntoControl => puntoControl.classList.remove('negrita'));
+    // Aplicar negrita al punto de control actual
     this.parentNode.classList.add('negrita');
 
     // Ocultar botón "Marcar" después de pulsarlo
