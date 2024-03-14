@@ -61,7 +61,6 @@ function agregarPuntoControl() {
         const div = document.createElement('div');
         div.classList.add('punto-control');
         div.innerHTML = `<span>${ultimoNumero}. ${nombre} - ${hora}</span>
-                         <button class="mostrar">Mostrar</button>
                          <button class="marcar">Marcar</button>
                          <span class="tiempo"></span>`;
         document.getElementById('puntos-control').appendChild(div);
@@ -71,10 +70,6 @@ function agregarPuntoControl() {
             const lineaDivisoria = document.createElement('hr');
             document.getElementById('puntos-control').appendChild(lineaDivisoria);
         }
-
-        // Agregar evento al botón "Mostrar" del nuevo punto de control
-        const botonMostrar = div.querySelector('.mostrar');
-        botonMostrar.addEventListener('click', mostrarRetrasoAdelanto);
 
         // Agregar evento al botón "Marcar" del nuevo punto de control
         const botonMarcar = div.querySelector('.marcar');
@@ -97,35 +92,3 @@ function calcularRetrasoAdelanto(horaPrevista) {
     const diferenciaMinutos = Math.round((horaPrevistaDate - ahora) / 60000);
     return diferenciaMinutos;
 }
-
-// Función para agregar un nuevo punto de control con nombre y hora prevista
-function agregarPuntoControl() {
-    const nombre = prompt('Ingrese el nombre del punto de control:');
-    const hora = prompt('Ingrese la hora prevista del punto de control (formato: HH:MM):');
-
-    if (nombre && hora) {
-        const puntosControl = document.querySelectorAll('.punto-control');
-        const ultimoNumero = puntosControl.length + 1;
-
-        const div = document.createElement('div');
-        div.classList.add('punto-control');
-        div.innerHTML = `<span>${ultimoNumero}. ${nombre} - ${hora}</span>
-                         <button class="mostrar">Mostrar</button>
-                         <button class="marcar">Marcar</button>
-                         <span class="tiempo"></span>`;
-        document.getElementById('puntos-control').appendChild(div);
-
-        // Agregar evento al botón "Mostrar" del nuevo punto de control
-        const botonMostrar = div.querySelector('.mostrar');
-        botonMostrar.addEventListener('click', mostrarRetrasoAdelanto);
-
-        // Agregar evento al botón "Marcar" del nuevo punto de control
-        const botonMarcar = div.querySelector('.marcar');
-        botonMarcar.addEventListener('click', marcarPuntoControl);
-    } else {
-        alert('Debe ingresar un nombre y una hora prevista para el punto de control.');
-    }
-}
-
-// Agregar evento al botón "Agregar punto de control"
-document.getElementById('agregar').addEventListener('click', agregarPuntoControl);
