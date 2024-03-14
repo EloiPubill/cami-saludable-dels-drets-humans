@@ -23,8 +23,8 @@
 
 /* Aplicar línea divisoria a todos los puntos de control excepto al último */
 .punto-control:not(:last-child) {
-    border-bottom: 1px solid #ccc;
-    margin-top: 15px; /* Agregar margen vertical */
+    border-bottom: 2px solid #ccc;
+    margin-top: 10px; /* Agregar margen vertical */
 }
 
 
