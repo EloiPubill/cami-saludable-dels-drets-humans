@@ -1,0 +1,30 @@
+/* Estilo para resaltar el tiempo de retraso */
+.punto-control {
+    font-weight: normal; /* Eliminar negrita del texto del punto de control */
+}
+
+/* Estilo para el tiempo de retraso */
+.retraso {
+    color: red; /* Cambiar el color del tiempo de retraso a rojo */
+}
+
+/* Estilo para el tiempo de adelanto */
+.adelanto {
+    color: green; /* Cambiar el color del tiempo de adelanto a verde */
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+.punto-control {
+    margin-bottom: 10px;
+}
+
+/* Aplicar línea divisoria solo al penúltimo punto de control */
+.punto-control:not(:first-child) {
+    border-top: 2px solid #ccc;
+    margin-top: 15px; /* Agregar margen vertical */
+}
+
+
