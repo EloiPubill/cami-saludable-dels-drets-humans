@@ -1,27 +1,3 @@
-// Función para mostrar el retraso o adelanto
-function mostrarRetrasoAdelanto() {
-    const horaPrevista = this.parentNode.querySelector('span').textContent.split(' - ')[1];
-    const diferenciaMinutos = calcularRetrasoAdelanto(horaPrevista);
-
-    const tiempoElemento = this.parentNode.querySelector('.tiempo');
-    tiempoElemento.textContent = `${Math.abs(diferenciaMinutos)} minutos`;
-
-    if (diferenciaMinutos < 0) {
-        tiempoElemento.style.color = 'red';
-        tiempoElemento.textContent = `+${Math.abs(diferenciaMinutos)}`;
-    } else if (diferenciaMinutos > 0) {
-        tiempoElemento.style.color = 'green';
-        tiempoElemento.textContent = `-${Math.abs(diferenciaMinutos)}`;
-    } else {
-        tiempoElemento.style.color = 'black';
-    }
-
-    // Aplicar negrita al último punto de control mostrado
-    const puntosControl = document.querySelectorAll('.punto-control');
-    puntosControl.forEach(puntoControl => puntoControl.classList.remove('negrita'));
-    this.parentNode.classList.add('negrita');
-}
-
 // Función para marcar el punto de control
 function marcarPuntoControl() {
     const horaPrevista = this.parentNode.querySelector('span').textContent.split(' - ')[1];
