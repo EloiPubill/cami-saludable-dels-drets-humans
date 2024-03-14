@@ -1,6 +1,0 @@
-# Configuración de Jekyll
-theme: jekyll-theme-primer
-markdown: kramdown
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
