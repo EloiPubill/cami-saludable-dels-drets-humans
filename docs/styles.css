@@ -1,0 +1,23 @@
+/* Estilo para resaltar el punto de control marcado */
+.negrita {
+    font-weight: bold;
+}
+
+/* Estilo para el tiempo de retraso */
+.retraso {
+    color: red; /* Color rojo para el retraso */
+}
+
+/* Estilo para el tiempo de adelanto */
+.adelanto {
+    color: green; /* Color verde para el adelanto */
+}
+
+.punto-control {
+    margin-bottom: 10px; /* Espaciado entre puntos de control */
+}
+
+/* Aplicar línea divisoria a todos los puntos de control */
+.punto-control {
+    border-bottom: 2px solid #ccc;
+}
